@@ -22,7 +22,7 @@ export function Hero({ title, subhead, supporting }: HeroProps) {
         sizes="100vw"
         className="object-cover object-[38%_35%] md:object-[55%_35%]"
       />
-      <div className="absolute inset-0 bg-green/80" aria-hidden="true" />
+      <div className="absolute inset-0 bg-green/75" aria-hidden="true" />
 
       <div className="container-site relative flex min-h-[400px] flex-col justify-center py-14 md:min-h-[480px] md:py-20">
         <div className="max-w-[640px]">

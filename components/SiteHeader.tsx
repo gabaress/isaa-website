@@ -28,11 +28,6 @@ export function SiteHeader() {
     toggleRef.current?.focus();
   }, []);
 
-  // Close on route change.
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
-
   // While open: lock scroll, move focus into the panel, trap Tab, close on Esc.
   useEffect(() => {
     if (!open) return;
@@ -126,6 +121,7 @@ export function SiteHeader() {
                     href={item.href}
                     aria-current={current ? "page" : undefined}
                     className={`flex min-h-[56px] items-center text-[20px] font-medium ${current ? "text-green" : "text-ink"}`}
+                    onClick={() => setOpen(false)}
                   >
                     <span className={`mr-4 h-6 w-[3px] ${current ? "bg-green" : "bg-transparent"}`} aria-hidden="true" />
                     {item.label}

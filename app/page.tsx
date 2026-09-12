@@ -64,7 +64,7 @@ export default function HomePage() {
             title="Find your club"
             intro="Every affiliated club is listed below. Pick your institution to jump straight to its contact details."
           />
-          <ul className="grid grid-cols-1 gap-x-8 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="grid grid-cols-1 gap-x-8 min-[480px]:grid-cols-2 lg:grid-cols-3">
             {clubs.map((club) => (
               <li key={club.id} className="border-b border-line">
                 <Link

@@ -41,19 +41,27 @@ const parse = (iso: string) => new Date(`${iso}T00:00:00Z`);
 export const formatDate = (iso: string): string =>
   dtf({ day: "numeric", month: "short", year: "numeric" }).format(parse(iso));
 
-/** Date block parts: day number(s) and month, e.g. { day: "14–15", month: "Nov" }. */
-export function dateBlock(e: ISAAEvent): { day: string; month: string; year: string } {
+/**
+ * Date block parts: { day: "14–15", month: "Nov" } for a range within a month,
+ * { day: "30–1", month: "Jan–Feb" } across months. `range` lets the block use a
+ * smaller size so ranges never wrap.
+ */
+export function dateBlock(e: ISAAEvent): { day: string; month: string; year: string; range: boolean } {
   const start = parse(e.startDate);
   const end = e.endDate ? parse(e.endDate) : start;
   const day = dtf({ day: "numeric" });
   const month = dtf({ month: "short" });
-  const sameMonth = start.getUTCMonth() === end.getUTCMonth() && start.getUTCFullYear() === end.getUTCFullYear();
-  if (e.endDate && e.endDate !== e.startDate) {
-    return sameMonth
-      ? { day: `${day.format(start)}–${day.format(end)}`, month: month.format(start), year: String(start.getUTCFullYear()) }
-      : { day: `${day.format(start)} ${month.format(start)} – ${day.format(end)}`, month: month.format(end), year: String(end.getUTCFullYear()) };
+  const year = String(end.getUTCFullYear());
+  if (!e.endDate || e.endDate === e.startDate) {
+    return { day: day.format(start), month: month.format(start), year, range: false };
   }
-  return { day: day.format(start), month: month.format(start), year: String(start.getUTCFullYear()) };
+  const sameMonth = start.getUTCMonth() === end.getUTCMonth() && start.getUTCFullYear() === end.getUTCFullYear();
+  return {
+    day: `${day.format(start)}–${day.format(end)}`,
+    month: sameMonth ? month.format(start) : `${month.format(start)}–${month.format(end)}`,
+    year,
+    range: true,
+  };
 }
 
 /** Machine-readable range for <time dateTime>. */

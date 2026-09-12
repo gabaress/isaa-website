@@ -65,13 +65,15 @@ export default function ClubsPage() {
             ))}
           </ul>
 
-          <p className="mt-12 border-t border-line pt-8 text-[16px]">
-            Club not listed, or details out of date?{" "}
-            <a href={`mailto:${site.email}`} className="link-body font-medium">
-              Email us
-            </a>{" "}
-            at {site.email}.
-          </p>
+          <div className="mt-12 border-t border-line pt-8">
+            <p className="text-[16px]">
+              Club not listed, or details out of date?{" "}
+              <a href={`mailto:${site.email}`} className="link-body font-medium">
+                Email us
+              </a>{" "}
+              at {site.email}.
+            </p>
+          </div>
         </div>
       </section>
     </>

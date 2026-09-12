@@ -52,4 +52,24 @@ export const clubCount = clubs.length;
 /** Interpolates the live club count into copy so nobody has to keep a prose number current. */
 export const withClubCount = (s: string): string => s.replaceAll("{clubCount}", String(clubCount));
 
-export const SITE_URL = `https://${site.domain}`;
+/**
+ * Absolute site origin for metadataBase, canonicals, the sitemap and JSON-LD.
+ *
+ * - `NEXT_PUBLIC_SITE_URL` wins when set — set it to https://isaa.archery.ie on
+ *   Vercel the day the custom domain resolves.
+ * - On Vercel without it, the deployment's own *.vercel.app host is used so that
+ *   Open Graph images resolve when a preview link is shared.
+ * - Anywhere else (local builds, the launch-gate check) it is the real domain.
+ */
+function resolveSiteUrl(): string {
+  const explicit = process.env.NEXT_PUBLIC_SITE_URL;
+  if (explicit) return explicit.replace(/\/$/, "");
+  const vercelHost =
+    process.env.VERCEL_ENV === "production"
+      ? process.env.VERCEL_PROJECT_PRODUCTION_URL
+      : process.env.VERCEL_BRANCH_URL || process.env.VERCEL_URL;
+  if (vercelHost) return `https://${vercelHost}`;
+  return `https://${site.domain}`;
+}
+
+export const SITE_URL = resolveSiteUrl();

@@ -16,8 +16,10 @@ export function EventItem({ event, past = false, compact = false }: { event: ISA
       }`}
     >
       <time dateTime={dateTimeAttr(event)} className="flex flex-col border-r border-line pr-3 sm:pr-4">
-        <span className={`text-[26px] font-bold leading-none tracking-[-0.02em] ${past ? "text-ink-muted" : "text-green"}`}>{d.day}</span>
-        <span className="text-meta mt-1 uppercase text-ink-muted">{d.month}</span>
+        <span className={`whitespace-nowrap font-bold leading-none tracking-[-0.02em] ${d.range ? "text-[21px]" : "text-[26px]"} ${past ? "text-ink-muted" : "text-green"}`}>
+          {d.day}
+        </span>
+        <span className="text-meta mt-1 whitespace-nowrap uppercase text-ink-muted">{d.month}</span>
         <span className="text-[13px] text-ink-muted">{d.year}</span>
       </time>
 

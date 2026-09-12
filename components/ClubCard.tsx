@@ -41,7 +41,7 @@ export function ClubCard({ club }: { club: Club }) {
           </span>
         ) : null}
         <div className="min-w-0">
-          <h3 className="text-[20px] leading-tight text-ink">{club.institution}</h3>
+          <h2 className="text-[20px] leading-tight tracking-normal text-ink">{club.institution}</h2>
           {club.clubName ? <p className="mt-1 text-[15px] leading-snug text-ink-muted">{club.clubName}</p> : null}
           {club.formerName ? <p className="mt-1 text-[14px] text-ink-muted">{club.formerName}</p> : null}
         </div>
