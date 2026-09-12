@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Beginner Archer's Intervarsity Competition Handbook 2025",
+    "description": "[insert one-line description: who it is for and what it covers]",
+    "group": "competing",
+    "file": "/pdfs/beginner-intervarsity-handbook-2025.pdf",
+    "sizeLabel": "PDF · 4.5MB",
+    "versionLabel": "Last updated August 2025"
+  },
+  {
+    "title": "Indoor and Outdoor Intervarsity Competition Handbook",
+    "description": "[insert one-line description: who it is for and what it covers]",
+    "group": "competing",
+    "file": "/pdfs/intervarsity-handbook-indoor-outdoor-2025.pdf",
+    "sizeLabel": "PDF · 5.3MB",
+    "versionLabel": "Last updated September 2025"
+  },
+  {
+    "title": "ISAA Rulebook",
+    "description": "[insert one-line description: who it is for and what it covers]",
+    "group": "competing",
+    "file": "/pdfs/isaa-rulebook-2017.pdf",
+    "sizeLabel": "PDF · 342KB",
+    "versionLabel": "Adopted 12 August 2017"
+  },
+  {
+    "title": "ISAA Constitution",
+    "description": "[insert one-line description: who it is for and what it covers]",
+    "group": "governance",
+    "file": "/pdfs/isaa-constitution-2017.pdf",
+    "sizeLabel": "PDF · 592KB",
+    "versionLabel": "Adopted 12 August 2017"
+  }
+]

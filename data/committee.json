@@ -1,0 +1,10 @@
+[
+  { "role": "Chairperson", "email": "isaachairperson@archery.ie" },
+  { "role": "Vice-Chairperson", "email": "isaavicechairperson@archery.ie" },
+  { "role": "Treasurer", "email": "isaatreasurer@archery.ie" },
+  { "role": "Secretary", "email": "isaasecretary@archery.ie" },
+  { "role": "Public Relations Officer (PRO)", "email": "isaapro@archery.ie" },
+  { "role": "Athlete Protection Officer", "email": "isaaapo@archery.ie" },
+  { "role": "Records Officer", "email": "isaarecords@archery.ie" },
+  { "role": "Webmaster", "email": "isaawebmaster@archery.ie" }
+]

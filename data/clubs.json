@@ -1,0 +1,134 @@
+[
+  {
+    "id": "atu-galway",
+    "institution": "ATU Galway",
+    "clubName": "Atlantic Technological University",
+    "city": "Galway",
+    "description": "[insert one-line description]",
+    "email": "[insert email here]",
+    "instagram": "[insert Instagram link here]"
+  },
+  {
+    "id": "atu-mayo",
+    "institution": "ATU Mayo",
+    "clubName": "Atlantic Technological University",
+    "city": "Castlebar",
+    "description": "[insert one-line description]",
+    "email": "[insert email here]",
+    "instagram": "[insert Instagram link here]"
+  },
+  {
+    "id": "atu-sligo",
+    "institution": "ATU Sligo",
+    "clubName": "Atlantic Technological University",
+    "city": "Sligo",
+    "description": "[insert one-line description]",
+    "email": "[insert email here]",
+    "instagram": "[insert Instagram link here]"
+  },
+  {
+    "id": "dcu",
+    "institution": "Dublin City University",
+    "city": "Dublin",
+    "description": "[insert one-line description]",
+    "email": "[insert email here]",
+    "instagram": "[insert Instagram link here]"
+  },
+  {
+    "id": "mu",
+    "institution": "Maynooth University",
+    "city": "Maynooth",
+    "description": "[insert one-line description]",
+    "email": "[insert email here]",
+    "instagram": "[insert Instagram link here]"
+  },
+  {
+    "id": "nci",
+    "institution": "National College of Ireland",
+    "city": "Dublin",
+    "description": "[insert one-line description]",
+    "email": "[insert email here]",
+    "instagram": "[insert Instagram link here]"
+  },
+  {
+    "id": "qub",
+    "institution": "Queen's University Belfast",
+    "city": "Belfast",
+    "description": "[insert one-line description]",
+    "email": "[insert email here]",
+    "instagram": "[insert Instagram link here]"
+  },
+  {
+    "id": "rcsi",
+    "institution": "RCSI",
+    "clubName": "RCSI University of Medicine and Health Sciences",
+    "city": "Dublin",
+    "description": "[insert one-line description]",
+    "email": "[insert email here]",
+    "instagram": "[insert Instagram link here]"
+  },
+  {
+    "id": "setu",
+    "institution": "South East Technological University",
+    "description": "[insert one-line description]",
+    "email": "[insert email here]",
+    "instagram": "[insert Instagram link here]"
+  },
+  {
+    "id": "tcd",
+    "institution": "Trinity College Dublin",
+    "clubName": "Dublin University Archery Club",
+    "city": "Dublin",
+    "description": "[insert one-line description]",
+    "email": "[insert email here]",
+    "instagram": "[insert Instagram link here]"
+  },
+  {
+    "id": "tud",
+    "institution": "TU Dublin",
+    "clubName": "Technological University Dublin",
+    "city": "Dublin",
+    "description": "[insert one-line description]",
+    "email": "[insert email here]",
+    "instagram": "[insert Instagram link here]"
+  },
+  {
+    "id": "ucc",
+    "institution": "University College Cork",
+    "city": "Cork",
+    "description": "[insert one-line description]",
+    "email": "[insert email here]",
+    "instagram": "[insert Instagram link here]"
+  },
+  {
+    "id": "ucd",
+    "institution": "University College Dublin",
+    "city": "Dublin",
+    "description": "[insert one-line description]",
+    "email": "[insert email here]",
+    "instagram": "[insert Instagram link here]"
+  },
+  {
+    "id": "galway",
+    "institution": "University of Galway",
+    "city": "Galway",
+    "description": "[insert one-line description]",
+    "email": "[insert email here]",
+    "instagram": "[insert Instagram link here]"
+  },
+  {
+    "id": "ul",
+    "institution": "University of Limerick",
+    "city": "Limerick",
+    "description": "[insert one-line description]",
+    "email": "[insert email here]",
+    "instagram": "[insert Instagram link here]"
+  },
+  {
+    "id": "ulster",
+    "institution": "Ulster University",
+    "description": "[insert one-line description]",
+    "email": "[insert email here]",
+    "instagram": "[insert Instagram link here]"
+  }
+]

@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+/* Design tokens — SPEC.md §5. Colours are read from the ISAA logo, not invented. */
+@theme {
+  --color-*: initial;
+  --color-green: #015a06;
+  --color-green-dark: #013d04;
+  --color-green-tint: #edf2ed;
+  --color-orange: #ff7e00;
+  --color-ink: #14181a;
+  --color-ink-muted: #5a6166;
+  --color-paper: #fbfaf7;
+  --color-surface: #ffffff;
+  --color-line: #e3e0d8;
+  --color-white: #ffffff;
+  --color-transparent: transparent;
+
+  --font-sans: var(--font-archivo), "Archivo", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+
+  --radius-*: initial;
+  --radius-sm: 4px;
+
+  --shadow-*: initial;
+
+  --breakpoint-*: initial;
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+
+  --container-site: 1120px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    font-feature-settings: "kern" 1;
+    text-rendering: optimizeLegibility;
+  }
+  @media (min-width: 40rem) {
+    body {
+      font-size: 17px;
+    }
+  }
+
+  /* Sticky 64px header: anchor targets must not be hidden beneath it (WCAG 2.2 2.4.11). */
+  [id] {
+    scroll-margin-top: 80px;
+  }
+
+  /* Visible focus everywhere; orange outline is the one place the accent carries interaction. */
+  :focus-visible {
+    outline: 2px solid var(--color-orange);
+    outline-offset: 2px;
+  }
+
+  h1, h2, h3, h4 {
+    font-weight: 700;
+    color: var(--color-green);
+    text-wrap: balance;
+  }
+  h1 {
+    font-size: clamp(30px, 4.5vw, 46px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  h2 {
+    font-size: clamp(26px, 3vw, 30px);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+  h3 {
+    font-size: clamp(19px, 2vw, 20px);
+    line-height: 1.3;
+  }
+  p {
+    max-width: 68ch;
+  }
+  ::selection {
+    background: var(--color-green);
+    color: var(--color-white);
+  }
+}
+
+@utility container-site {
+  width: 100%;
+  max-width: var(--container-site);
+  margin-inline: auto;
+  padding-inline: 20px;
+  @media (min-width: 40rem) {
+    padding-inline: 24px;
+  }
+}
+
+/* Section rhythm: 48px mobile, 80px desktop. */
+@utility section-pad {
+  padding-block: 48px;
+  @media (min-width: 48rem) {
+    padding-block: 80px;
+  }
+}
+
+/* Body links: underlined with a 2px green underline, never colour alone. */
+@utility link-body {
+  color: var(--color-green);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--color-green);
+  transition: color 120ms, text-decoration-color 120ms;
+  &:hover {
+    color: var(--color-green-dark);
+    text-decoration-color: var(--color-orange);
+  }
+}
+
+/* Meta / labels: 13px, 500, 0.06em tracking. Uppercase applied at the call site only for tags and date blocks. */
+@utility text-meta {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+}
+
+/* Unsupplied content in the demo build — see lib/content.ts. Must never resemble real data. */
+@utility placeholder-chip {
+  display: inline-block;
+  border: 1px dashed var(--color-ink-muted);
+  color: var(--color-ink-muted);
+  background: transparent;
+  font-size: 14px;
+  line-height: 1.4;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-style: italic;
+}
