@@ -44,7 +44,7 @@ export function SiteFooter() {
           <h2 className="text-meta uppercase text-ink-muted">Contact</h2>
           <a
             href={`mailto:${site.email}`}
-            className="mt-3 inline-flex min-h-[44px] items-center gap-2 text-[17px] font-bold text-green underline decoration-2 underline-offset-4 hover:text-green-dark"
+            className="mt-3 inline-flex min-h-[44px] items-center gap-2 text-[15px] font-medium text-green hover:text-green-dark"
           >
             <MailIcon size={20} />
             {site.email}
