@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { DocumentRow } from "@/components/DocumentRow";
 import { PageHeader } from "@/components/PageHeader";
 import { SectionHeading } from "@/components/SectionHeading";
-import { VerifyNote } from "@/components/Placeholder";
 import { documents } from "@/lib/content";
 import type { DocumentGroup } from "@/types";
 
@@ -47,11 +46,7 @@ export default function ResourcesPage() {
           })}
         </div>
 
-        <p className="mt-12 text-[15px] text-ink-muted">
-          Version dates are taken from inside each document.
-          <VerifyNote>have the Constitution or Rulebook been amended at any AGM since 2017? Are the two handbooks current for this season?</VerifyNote>
-          <VerifyNote>does a safeguarding or athlete-protection policy document exist? If so it belongs under Governance.</VerifyNote>
-        </p>
+        <p className="mt-12 text-[15px] text-ink-muted">Version dates are taken from inside each document.</p>
       </div>
     </>
   );

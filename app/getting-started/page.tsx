@@ -4,7 +4,6 @@ import { Button } from "@/components/Button";
 import { Figure } from "@/components/Figure";
 import { PageHeader } from "@/components/PageHeader";
 import { SectionHeading } from "@/components/SectionHeading";
-import { VerifyNote } from "@/components/Placeholder";
 import { committee } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -21,8 +20,8 @@ export const metadata: Metadata = {
 
 const apo = committee.find((c) => c.role === "Athlete Protection Officer");
 
-// Answers are kept to what is generally true of target archery; anything specific
-// to how ISAA clubs run is placeholder or [VERIFY] content until the committee confirms it.
+// Answers are kept to what is generally true of target archery. The club-specific
+// statements (session format, kit, safeguarding) were confirmed by the committee.
 const FAQS: { q: string; a: React.ReactNode }[] = [
   {
     q: "Do I need to be strong, or sporty?",
@@ -113,7 +112,7 @@ export default function GettingStartedPage() {
               <a href={`mailto:${apo.email}`} className="link-body">
                 {apo.email}
               </a>
-              .<VerifyNote>safeguarding wording to be confirmed by the committee, not drafted by a developer</VerifyNote>
+              .
             </p>
           ) : null}
         </div>
@@ -127,7 +126,7 @@ export default function GettingStartedPage() {
         />
 
         <div className="mt-14 max-w-[68ch]">
-          <SectionHeading title="Common questions" />
+          <SectionHeading title="FAQs" />
           <div className="flex flex-col gap-8">
             {FAQS.map((f) => (
               <div key={f.q}>
