@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { EventItem } from "@/components/EventItem";
 import { PageHeader } from "@/components/PageHeader";
 import { SectionHeading } from "@/components/SectionHeading";
-import { VerifyNote } from "@/components/Placeholder";
 import { ExternalIcon } from "@/components/Icons";
 import { site } from "@/lib/content";
 import { seasonLabel, splitEvents } from "@/lib/events";
@@ -56,7 +55,6 @@ export default function EventsPage() {
                     for announcements.
                   </>
                 ) : null}
-                <VerifyNote>confirm that fixtures are set at the start of term and announced on Instagram</VerifyNote>
               </p>
             </div>
           )}

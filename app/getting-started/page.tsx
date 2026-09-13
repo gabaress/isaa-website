@@ -4,7 +4,7 @@ import { Button } from "@/components/Button";
 import { Figure } from "@/components/Figure";
 import { PageHeader } from "@/components/PageHeader";
 import { SectionHeading } from "@/components/SectionHeading";
-import { ContentField, VerifyNote } from "@/components/Placeholder";
+import { VerifyNote } from "@/components/Placeholder";
 import { committee } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -84,13 +84,11 @@ export default function GettingStartedPage() {
           <p>
             You will be shown how to stand, how to hold the bow and how to draw and release, then you will shoot at a target from close range under
             supervision. Everything is explained on the day. By the end of the session most people have put arrows in the target.
-            <VerifyNote>confirm this description of a typical club beginners&apos; session</VerifyNote>
           </p>
 
           <h3 className="mt-10 text-ink">Equipment</h3>
           <p className="mt-2">
-            Clubs run beginners&apos; sessions with club equipment, so you do not need to buy anything to try it.
-            <VerifyNote>do all clubs supply beginner kit?</VerifyNote>
+            Most clubs supply beginner kit for their sessions, so you do not need to buy anything to try it.
           </p>
           <p className="mt-3">Wear something close-fitting on your top half and tie back long hair, because a bowstring will catch on anything loose.</p>
 
@@ -102,9 +100,6 @@ export default function GettingStartedPage() {
             </Link>
             .
           </p>
-          <ContentField value="[insert typical club membership cost range, if the committee wants one published]" placeholderClassName="mt-3">
-            {(f) => <p className="mt-3">{f.value}</p>}
-          </ContentField>
 
           <h3 className="mt-10 text-ink">Safety and supervision</h3>
           <p className="mt-2">

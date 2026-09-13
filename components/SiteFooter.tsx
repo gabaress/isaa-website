@@ -8,6 +8,15 @@ import { site } from "@/lib/content";
 // here is the site's main standing contact point. Social icons render only when a
 // handle is supplied - no dead icons.
 
+// "irish_student_archery" from https://www.instagram.com/irish_student_archery/
+const socialHandle = (url: string): string => {
+  try {
+    return new URL(url).pathname.split("/").filter(Boolean)[0] ?? url;
+  } catch {
+    return url;
+  }
+};
+
 export function SiteFooter() {
   const year = new Date().getFullYear();
   return (
@@ -40,17 +49,18 @@ export function SiteFooter() {
             <MailIcon size={20} />
             {site.email}
           </a>
-          <ul className="mt-3 flex gap-2">
+          <ul className="mt-1 flex flex-col">
             {site.instagram ? (
               <li>
                 <a
                   href={site.instagram}
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-sm text-green hover:bg-green-tint"
-                  aria-label="ISAA on Instagram (opens in a new tab)"
+                  className="inline-flex min-h-[44px] items-center gap-2 text-[15px] font-medium text-green hover:text-green-dark"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <InstagramIcon />
+                  <InstagramIcon size={20} />
+                  {socialHandle(site.instagram)}
+                  <span className="sr-only"> on Instagram (opens in a new tab)</span>
                 </a>
               </li>
             ) : null}
@@ -58,12 +68,13 @@ export function SiteFooter() {
               <li>
                 <a
                   href={site.facebook}
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-sm text-green hover:bg-green-tint"
-                  aria-label="ISAA on Facebook (opens in a new tab)"
+                  className="inline-flex min-h-[44px] items-center gap-2 text-[15px] font-medium text-green hover:text-green-dark"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FacebookIcon />
+                  <FacebookIcon size={20} />
+                  {socialHandle(site.facebook)}
+                  <span className="sr-only"> on Facebook (opens in a new tab)</span>
                 </a>
               </li>
             ) : null}

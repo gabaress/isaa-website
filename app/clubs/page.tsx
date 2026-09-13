@@ -67,11 +67,11 @@ export default function ClubsPage() {
 
           <div className="mt-12 border-t border-line pt-8">
             <p className="text-[16px]">
-              Club not listed, or details out of date?{" "}
+              Club not listed, or details out of date? Email us at{" "}
               <a href={`mailto:${site.email}`} className="link-body font-medium">
-                Email us
-              </a>{" "}
-              at {site.email}.
+                {site.email}
+              </a>
+              .
             </p>
           </div>
         </div>
