@@ -4,7 +4,7 @@
     "institution": "ATU Galway",
     "clubName": "Atlantic Technological University",
     "description": "[insert one-line description]",
-    "email": "[insert email here]",
+    "email": "gmit.archers@gmail.com",
     "instagram": "[insert Instagram link here]"
   },
   {
@@ -12,7 +12,7 @@
     "institution": "ATU Mayo",
     "clubName": "Atlantic Technological University",
     "description": "[insert one-line description]",
-    "email": "[insert email here]",
+    "email": "mayoarchery@galwaymayo.atusulife.ie",
     "instagram": "[insert Instagram link here]"
   },
   {
@@ -20,35 +20,35 @@
     "institution": "ATU Sligo",
     "clubName": "Atlantic Technological University",
     "description": "[insert one-line description]",
-    "email": "[insert email here]",
+    "email": "archery@sligo.atusulife.ie",
     "instagram": "[insert Instagram link here]"
   },
   {
     "id": "dcu",
     "institution": "Dublin City University",
     "description": "[insert one-line description]",
-    "email": "[insert email here]",
+    "email": "secretary.dcuac@gmail.com",
     "instagram": "[insert Instagram link here]"
   },
   {
     "id": "mu",
     "institution": "Maynooth University",
     "description": "[insert one-line description]",
-    "email": "[insert email here]",
+    "email": "archery@mulife.ie",
     "instagram": "[insert Instagram link here]"
   },
   {
     "id": "nci",
     "institution": "National College of Ireland",
     "description": "[insert one-line description]",
-    "email": "[insert email here]",
+    "email": "nci.archers@gmail.com",
     "instagram": "[insert Instagram link here]"
   },
   {
     "id": "qub",
     "institution": "Queen's University Belfast",
     "description": "[insert one-line description]",
-    "email": "[insert email here]",
+    "email": "archery@qub.ac.uk",
     "instagram": "[insert Instagram link here]"
   },
   {
@@ -56,14 +56,14 @@
     "institution": "RCSI",
     "clubName": "RCSI University of Medicine and Health Sciences",
     "description": "[insert one-line description]",
-    "email": "[insert email here]",
+    "email": "archery@rcsi.ie",
     "instagram": "[insert Instagram link here]"
   },
   {
     "id": "setu",
     "institution": "South East Technological University",
     "description": "[insert one-line description]",
-    "email": "[insert email here]",
+    "email": "ARCHERY.cw@setu.ie",
     "instagram": "[insert Instagram link here]"
   },
   {
@@ -71,7 +71,7 @@
     "institution": "Trinity College Dublin",
     "clubName": "Dublin University Archery Club",
     "description": "[insert one-line description]",
-    "email": "[insert email here]",
+    "email": "archery@tcd.ie",
     "instagram": "[insert Instagram link here]"
   },
   {
@@ -79,42 +79,42 @@
     "institution": "TU Dublin",
     "clubName": "Technological University Dublin",
     "description": "[insert one-line description]",
-    "email": "[insert email here]",
+    "email": "archery@tudublin.ie",
     "instagram": "[insert Instagram link here]"
   },
   {
     "id": "ucc",
     "institution": "University College Cork",
     "description": "[insert one-line description]",
-    "email": "[insert email here]",
+    "email": "archery@uccclubs.ie",
     "instagram": "[insert Instagram link here]"
   },
   {
     "id": "ucd",
     "institution": "University College Dublin",
     "description": "[insert one-line description]",
-    "email": "[insert email here]",
+    "email": "archery@ucd.ie",
     "instagram": "[insert Instagram link here]"
   },
   {
     "id": "galway",
     "institution": "University of Galway",
     "description": "[insert one-line description]",
-    "email": "[insert email here]",
+    "email": "archery@clubs.universityofgalway.ie",
     "instagram": "[insert Instagram link here]"
   },
   {
     "id": "ul",
     "institution": "University of Limerick",
     "description": "[insert one-line description]",
-    "email": "[insert email here]",
+    "email": "ularchery@gmail.com",
     "instagram": "[insert Instagram link here]"
   },
   {
     "id": "ulster",
     "institution": "Ulster University",
     "description": "[insert one-line description]",
-    "email": "[insert email here]",
+    "email": "jordanstownarchery@gmail.com",
     "instagram": "[insert Instagram link here]"
   }
 ]
