@@ -52,7 +52,6 @@ export default function HomePage() {
       <Hero
         title="Archery for students, across the island of Ireland"
         subhead="Sixteen affiliated college and university clubs, open to every skill level."
-        supporting="We run the indoor and outdoor intervarsity competitions and connect student archery clubs to one another."
       />
 
       <FactsStrip />

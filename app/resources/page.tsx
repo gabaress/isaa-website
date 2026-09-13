@@ -45,8 +45,6 @@ export default function ResourcesPage() {
             );
           })}
         </div>
-
-        <p className="mt-12 text-[15px] text-ink-muted">Version dates are taken from inside each document.</p>
       </div>
     </>
   );
