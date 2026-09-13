@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 // Empty groups do not render.
 const GROUPS: { key: DocumentGroup; title: string; intro: string }[] = [
-  { key: "competing", title: "Competing", intro: "The intervarsity documentation — formats, rules and what to expect at ISAA competitions." },
+  { key: "competing", title: "Competing", intro: "The intervarsity documentation: formats, rules and what to expect at ISAA competitions." },
   { key: "governance", title: "Governance", intro: "How the association is constituted and run." },
 ];
 

@@ -1,4 +1,4 @@
-// The five header links — the ceiling. Contact lives in the footer, on /about and in the mobile menu.
+// The five header links - the ceiling. Contact lives in the footer, on /about and in the mobile menu.
 export const NAV = [
   { href: "/clubs", label: "Clubs" },
   { href: "/events", label: "Events" },

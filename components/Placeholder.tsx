@@ -1,7 +1,7 @@
 import { field, showPlaceholders, type Field } from "@/lib/content";
 
 // Unsupplied content, demo build only. Muted, dashed, and the literal bracketed
-// string — never styled to resemble real data. See lib/content.ts.
+// string - never styled to resemble real data. See lib/content.ts.
 
 export function Placeholder({ value, className = "" }: { value: string; className?: string }) {
   return <span className={`placeholder-chip ${className}`}>{value}</span>;

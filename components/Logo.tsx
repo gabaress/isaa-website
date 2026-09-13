@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-// The ISAA mark, inlined (2.7KB) from public/logo/isaa-mark.svg — the vectorised logo
+// The ISAA mark, inlined (2.7KB) from public/logo/isaa-mark.svg - the vectorised logo
 // with its 214KB hidden tracing raster removed. See scripts/ and CONTENT.md.
 // Colours are hard-coded brand values from the logo file, not tokens, so the mark
 // looks identical wherever it is placed. On dark panels use mono="white".
@@ -30,7 +30,7 @@ export function LogoLockup({ onDark = false, className = "" }: { onDark?: boolea
     <Link
       href="/"
       className={`inline-flex items-center gap-3 rounded-sm ${onDark ? "text-white" : "text-green"} ${className}`}
-      aria-label="Irish Student Archery Association — home"
+      aria-label="Irish Student Archery Association, home"
     >
       <IsaaMark size={36} mono={onDark ? "white" : undefined} />
       <span className="flex flex-col leading-none">

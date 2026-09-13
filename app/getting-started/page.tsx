@@ -48,7 +48,7 @@ const FAQS: { q: string; a: React.ReactNode }[] = [
     q: "What happens at my first competition?",
     a: (
       <>
-        ISAA publishes a handbook written specifically for beginners entering their first intervarsity — what the format is, what to bring and how scoring works. Read the{" "}
+        ISAA publishes a handbook written specifically for beginners entering their first intervarsity: what the format is, what to bring and how scoring works. Read the{" "}
         <Link href="/resources" className="link-body">
           Beginner Archer&apos;s Intervarsity Competition Handbook
         </Link>{" "}
@@ -92,7 +92,7 @@ export default function GettingStartedPage() {
             Clubs run beginners&apos; sessions with club equipment, so you do not need to buy anything to try it.
             <VerifyNote>do all clubs supply beginner kit?</VerifyNote>
           </p>
-          <p className="mt-3">Wear something close-fitting on your top half and tie back long hair — a bowstring will catch on anything loose.</p>
+          <p className="mt-3">Wear something close-fitting on your top half and tie back long hair, because a bowstring will catch on anything loose.</p>
 
           <h3 className="mt-10 text-ink">What it costs</h3>
           <p className="mt-2">
@@ -108,7 +108,7 @@ export default function GettingStartedPage() {
 
           <h3 className="mt-10 text-ink">Safety and supervision</h3>
           <p className="mt-2">
-            Archery is run to strict range rules — everybody shoots and collects arrows together, on command, and beginners are supervised throughout. Your
+            Archery is run to strict range rules: everybody shoots and collects arrows together, on command, and beginners are supervised throughout. Your
             club will walk you through the range rules before you pick up a bow.
           </p>
           {apo ? (

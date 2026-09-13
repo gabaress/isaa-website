@@ -4,7 +4,6 @@ import { ContactBlock } from "@/components/ContactBlock";
 import { Figure } from "@/components/Figure";
 import { PageHeader } from "@/components/PageHeader";
 import { SectionHeading } from "@/components/SectionHeading";
-import { VerifyNote } from "@/components/Placeholder";
 import { clubCount, committee } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -25,7 +24,7 @@ export default function AboutPage() {
       <PageHeader title="About ISAA" />
 
       <div className="container-site section-pad">
-        {/* Approved copy — SPEC.md §14.2. The club count interpolates from clubs.json. */}
+        {/* Approved copy, SPEC.md §14.2. The club count interpolates from clubs.json. */}
         <div className="max-w-[68ch] text-[17px] leading-relaxed md:text-[18px]">
           <p>
             The Irish Student Archery Association is the association for archery in third-level education across the island of Ireland. We have{" "}
@@ -33,12 +32,10 @@ export default function AboutPage() {
           </p>
           <p className="mt-5">
             We run the indoor and outdoor intervarsity competitions, publish the rules and handbooks that govern them, and connect student clubs to one
-            another. Our clubs take complete beginners every year — most students who shoot with us had never picked up a bow before they joined.
-            <VerifyNote>committee to confirm or cut &ldquo;most students who shoot with us had never picked up a bow before they joined&rdquo;</VerifyNote>
+            another. Our clubs take complete beginners every year.
           </p>
           <p className="mt-5">
             ISAA operates under Archery Ireland, the national governing body for the sport, and abides by its rules and regulations.
-            <VerifyNote>taken from the 2017 Constitution (article 1.2) — confirm this is still the current arrangement</VerifyNote>
           </p>
           <p className="mt-5 text-ink-muted">
             The competition handbooks, the rulebook and the constitution are on the{" "}

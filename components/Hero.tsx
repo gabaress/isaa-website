@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/Button";
 
-// Photo-led hero under a solid ISAA-green scrim — a brand panel that happens to
+// Photo-led hero under a solid ISAA-green scrim - a brand panel that happens to
 // contain a photograph. The scrim is solid, never a gradient. Text left-aligned;
 // buttons full-width on mobile. object-position keeps the archer in frame at 375px.
 

@@ -34,7 +34,7 @@ export function CopyButton({ text }: { text: string }) {
         {state === "copied" ? "Copied" : state === "failed" ? "Select and copy" : "Copy address"}
       </button>
       <span className="sr-only" role="status" aria-live="polite">
-        {state === "copied" ? "Email address copied to clipboard" : state === "failed" ? "Copy failed — select the address to copy it" : ""}
+        {state === "copied" ? "Email address copied to clipboard" : state === "failed" ? "Copy failed. Select the address to copy it" : ""}
       </span>
     </>
   );

@@ -1,4 +1,4 @@
-// The six hand-written icons the site needs — SPEC.md §5.3. 24×24, currentColor, 1.5px stroke.
+// The six hand-written icons the site needs - SPEC.md §5.3. 24×24, currentColor, 1.5px stroke.
 // All are decorative; the owning control carries the accessible name.
 
 type IconProps = { className?: string; size?: number };

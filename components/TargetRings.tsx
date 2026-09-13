@@ -1,4 +1,4 @@
-// Decorative target-ring motif — 404, hero fallback. Always aria-hidden.
+// Decorative target-ring motif - 404, hero fallback. Always aria-hidden.
 
 export function TargetRings({ className = "", size = 240 }: { className?: string; size?: number }) {
   return (

@@ -5,7 +5,7 @@ import { ContentField } from "@/components/Placeholder";
 import { dateBlock, dateTimeAttr, externalHost, formatDate } from "@/lib/events";
 
 // Date block · title · type tag · venue · description · entry deadline · external link.
-// No registration of any kind is built — the entry link goes wherever ISAA already uses.
+// No registration of any kind is built - the entry link goes wherever ISAA already uses.
 
 export function EventItem({ event, past = false, compact = false }: { event: ISAAEvent; past?: boolean; compact?: boolean }) {
   const d = dateBlock(event);

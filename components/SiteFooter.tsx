@@ -6,7 +6,7 @@ import { site } from "@/lib/content";
 
 // Three columns on desktop, stacked on mobile. With no contact form, the email
 // here is the site's main standing contact point. Social icons render only when a
-// handle is supplied — no dead icons.
+// handle is supplied - no dead icons.
 
 export function SiteFooter() {
   const year = new Date().getFullYear();

@@ -5,7 +5,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SITE_URL, site } from "@/lib/content";
 import "./globals.css";
 
-// One family: Archivo, 400/500/700, latin only, swap — SPEC.md §5.2.
+// One family: Archivo, 400/500/700, latin only, swap - SPEC.md §5.2.
 const archivo = Archivo({
   subsets: ["latin"],
   weight: ["400", "500", "700"],

@@ -6,7 +6,7 @@ import { clubCount, clubs, site } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Clubs",
   description:
-    "Find your university's archery club in Ireland — contact details for every ISAA-affiliated college and university archery club across the island.",
+    "Find your university's archery club in Ireland: contact details for every ISAA-affiliated college and university archery club across the island.",
   alternates: { canonical: "/clubs" },
   openGraph: {
     title: "Clubs | ISAA",

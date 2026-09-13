@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Design tokens — SPEC.md §5. Colours are read from the ISAA logo, not invented. */
+/* Design tokens - SPEC.md §5. Colours are read from the ISAA logo, not invented. */
 @theme {
   --color-*: initial;
   --color-green: #015a06;
@@ -140,7 +140,7 @@
   line-height: 1.4;
 }
 
-/* Unsupplied content in the demo build — see lib/content.ts. Must never resemble real data. */
+/* Unsupplied content in the demo build - see lib/content.ts. Must never resemble real data. */
 @utility placeholder-chip {
   display: inline-block;
   border: 1px dashed var(--color-ink-muted);

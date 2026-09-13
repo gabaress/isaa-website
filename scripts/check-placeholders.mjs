@@ -1,4 +1,4 @@
-// Launch gate — SPEC.md §7 item 10 and §12.
+// Launch gate - SPEC.md §7 item 10 and §12.
 // Greps the built HTML for placeholder sentinels and fails if any are present.
 // Run after `next build` with NEXT_PUBLIC_SHOW_PLACEHOLDERS unset:
 //   npm run check:launch
@@ -30,7 +30,7 @@ for (const file of walk(root)) {
 }
 
 if (process.env.NEXT_PUBLIC_SHOW_PLACEHOLDERS === "true") {
-  console.log(`(demo build — ${failures} placeholder(s) rendered on purpose)`);
+  console.log(`(demo build - ${failures} placeholder(s) rendered on purpose)`);
 } else if (failures > 0) {
   console.error(`\n${failures} placeholder(s) found in the built output. Do not publish this build.`);
   process.exit(1);

@@ -7,12 +7,12 @@ import committeeData from "@/data/committee.json";
 import type { Club, CommitteeRole, Fact, ISAAEvent, SiteConfig, SiteDocument } from "@/types";
 
 // ---------------------------------------------------------------------------
-// Placeholder guard — SPEC.md §7 item 10.
+// Placeholder guard - SPEC.md §7 item 10.
 //
 // Any bracketed string in the JSON is unsupplied content, not data. In the demo
 // build (NEXT_PUBLIC_SHOW_PLACEHOLDERS=true) it renders visibly as a placeholder
-// so the committee can see exactly what is missing. Everywhere else — the
-// default — it is treated as absent and its row is omitted.
+// so the committee can see exactly what is missing. Everywhere else - the
+// default - it is treated as absent and its row is omitted.
 //
 // Delete this scaffolding once every placeholder has been replaced.
 // ---------------------------------------------------------------------------
@@ -37,7 +37,7 @@ export function field(v?: string): Field {
 export const present = (v?: string): boolean => field(v).kind !== "absent";
 
 // ---------------------------------------------------------------------------
-// Data — typed, imported at build time. No fetching, no runtime data layer.
+// Data - typed, imported at build time. No fetching, no runtime data layer.
 // ---------------------------------------------------------------------------
 
 export const site: SiteConfig = siteData;
@@ -55,7 +55,7 @@ export const withClubCount = (s: string): string => s.replaceAll("{clubCount}", 
 /**
  * Absolute site origin for metadataBase, canonicals, the sitemap and JSON-LD.
  *
- * - `NEXT_PUBLIC_SITE_URL` wins when set — set it to https://isaa.archery.ie on
+ * - `NEXT_PUBLIC_SITE_URL` wins when set - set it to https://isaa.archery.ie on
  *   Vercel the day the custom domain resolves.
  * - On Vercel without it, the deployment's own *.vercel.app host is used so that
  *   Open Graph images resolve when a preview link is shared.
