@@ -5,7 +5,6 @@ export interface Club {
   institution: string; // CURRENT official name, as it displays
   formerName?: string; // "formerly NUI Galway" - only where ISAA asks for it
   clubName?: string;
-  city?: string; // omitted for multi-campus institutions
   description?: string;
   email?: string;
   instagram?: string; // full URL

@@ -44,7 +44,6 @@ One entry per affiliated club, kept in alphabetical order by the name students s
 | `id` | yes | Short lowercase code, e.g. `ucd`. This is the link anchor: `/clubs#ucd`. Do not change it once published. |
 | `institution` | yes | The big label on the card — the name a student looks for. For ATU use the campus (`ATU Sligo`). |
 | `clubName` | no | Second line: the club's own name (`Dublin University Archery Club`), or the full institution name where the big label is a short form. |
-| `city` | no | Leave out for multi-campus institutions. |
 | `description` | no | One or two plain sentences about the club. |
 | `email` | no | The club's contact address. |
 | `instagram` | no | The full URL, e.g. `https://www.instagram.com/example/`. |

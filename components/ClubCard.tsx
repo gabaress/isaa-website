@@ -30,7 +30,6 @@ const rowClass = "inline-flex min-h-[44px] items-center gap-2 text-[15px] font-m
 
 export function ClubCard({ club }: { club: Club }) {
   const hasContacts = present(club.email) || present(club.instagram) || present(club.website);
-  const metaBits = ["Archery club", club.city].filter(Boolean).join(" · ");
 
   return (
     <li id={club.id} className="flex flex-col rounded-sm border border-line border-t-[3px] border-t-green bg-surface p-5 sm:p-6">
@@ -46,8 +45,6 @@ export function ClubCard({ club }: { club: Club }) {
           {club.formerName ? <p className="mt-1 text-[14px] text-ink-muted">{club.formerName}</p> : null}
         </div>
       </div>
-
-      <p className="text-meta mt-3 uppercase text-ink-muted">{metaBits}</p>
 
       <ContentField value={club.description} placeholderClassName="mt-3 self-start">
         {(f) => <p className="mt-3 text-[15px] leading-relaxed">{f.value}</p>}
