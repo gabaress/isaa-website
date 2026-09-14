@@ -2,15 +2,17 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useCallback, useEffect, useId, useRef, useState } from "react";
+import { useCallback, useEffect, useId, useLayoutEffect, useRef, useState, type RefCallback } from "react";
 import { LogoLockup } from "@/components/Logo";
 import { CloseIcon, InstagramIcon, MailIcon, MenuIcon } from "@/components/Icons";
 import { site } from "@/lib/content";
 import { NAV } from "@/lib/nav";
 
 // Sticky 64px header. Five links, no CTA button. Current page gets aria-current
-// and a 2px green underline. Mobile: hamburger opens a full-screen panel with the
-// same five items; focus is trapped while open, Esc closes, focus returns to the toggle.
+// and a 2px green underline that slides to the active link on navigation
+// (a shared bar, repositioned via transform/width - see the indicator state
+// below). Mobile: hamburger opens a full-screen panel with the same five
+// items; focus is trapped while open, Esc closes, focus returns to the toggle.
 
 const FOCUSABLE = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
@@ -22,6 +24,51 @@ export function SiteHeader() {
   const panelId = useId();
 
   const isCurrent = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
+  const activeHref = NAV.find((item) => isCurrent(item.href))?.href;
+
+  // Desktop underline: one shared bar, slid under the active link instead of
+  // each link drawing its own border. This positions an existing DOM node
+  // directly rather than routing measurements through React state - the bar's
+  // position isn't something any page renders differently, so there is
+  // nothing here for state to synchronise, only a rect to apply.
+  const linkRefs = useRef(new Map<string, HTMLAnchorElement>());
+  const indicatorRef = useRef<HTMLSpanElement>(null);
+
+  const positionIndicator = useCallback(() => {
+    const bar = indicatorRef.current;
+    if (!bar) return;
+    const el = activeHref ? linkRefs.current.get(activeHref) : undefined;
+    if (!el) {
+      bar.style.opacity = "0";
+      return;
+    }
+    bar.style.opacity = "1";
+    bar.style.width = `${el.offsetWidth}px`;
+    bar.style.transform = `translateX(${el.offsetLeft}px)`;
+  }, [activeHref]);
+
+  // Runs before paint so the bar is already in place on first render (no
+  // slide-in from nowhere) and animates on every later reposition.
+  useLayoutEffect(() => {
+    positionIndicator();
+  }, [positionIndicator]);
+
+  useEffect(() => {
+    window.addEventListener("resize", positionIndicator);
+    // Archivo loads with font-display: swap; a late font swap can shift link
+    // widths slightly, so re-measure once webfonts are actually in.
+    document.fonts?.ready.then(positionIndicator).catch(() => {});
+    return () => window.removeEventListener("resize", positionIndicator);
+  }, [positionIndicator]);
+
+  const setLinkRef = useCallback(
+    (href: string): RefCallback<HTMLAnchorElement> =>
+      (el) => {
+        if (el) linkRefs.current.set(href, el);
+        else linkRefs.current.delete(href);
+      },
+    [],
+  );
 
   const close = useCallback(() => {
     setOpen(false);
@@ -72,16 +119,22 @@ export function SiteHeader() {
         <LogoLockup />
 
         <nav aria-label="Primary" className="hidden md:block">
-          <ul className="flex items-center gap-1">
+          <ul className="relative flex items-center gap-1">
+            <span
+              ref={indicatorRef}
+              aria-hidden="true"
+              className="pointer-events-none absolute bottom-0 left-0 h-[2px] w-0 bg-green opacity-0 transition-all duration-300 ease-out"
+            />
             {NAV.map((item) => {
               const current = isCurrent(item.href);
               return (
                 <li key={item.href}>
                   <Link
+                    ref={setLinkRef(item.href)}
                     href={item.href}
                     aria-current={current ? "page" : undefined}
-                    className={`inline-flex h-16 items-center border-b-2 px-3 text-[15px] font-medium transition-colors duration-[120ms] ${
-                      current ? "border-green text-green" : "border-transparent text-ink hover:text-green"
+                    className={`inline-flex h-16 items-center border-b-2 border-transparent px-3 text-[15px] font-medium transition-colors duration-[120ms] ${
+                      current ? "text-green" : "text-ink hover:text-green"
                     }`}
                   >
                     {item.label}
